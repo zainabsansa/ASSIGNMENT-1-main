@@ -1,6 +1,6 @@
 const multer = require("multer");
-const sharp = require("sharp"); // To handle image resizing and formatting
-const User = require("./models/user");
+// const sharp = require("sharp"); // To handle image resizing and formatting
+// const User = require("../Models/userModel");
 
 // 1. Configure multer to store files in memory
 // This means the files are stored in RAM as buffers and not directly saved on disk.

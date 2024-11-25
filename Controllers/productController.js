@@ -4,13 +4,13 @@ const Product = require("../Models/productModel");
  // POST
  exports.createProduct =  async function (req, res) {
   try {
-    const {creator, name, price, description, image} = req.body;
+    const {creator, name, price, ingredients, image} = req.body;
 
     const newProduct = await Product.create({
       creator,
       name,
       price,
-      description,
+      ingredients,
       image
     });
 

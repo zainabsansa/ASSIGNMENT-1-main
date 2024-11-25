@@ -14,7 +14,7 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Product must have a Price"],
   },
-  description: {
+  ingredients: {
     type: String,
   },
   image: String, //shorthand because it has only one sub

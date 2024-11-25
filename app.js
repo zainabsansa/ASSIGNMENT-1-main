@@ -1,17 +1,19 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
-const userRouter = require("../Routers/userRoute");
-const authRouter = require("../Routers/authRoute");
-const productRouter = require("../Routers/productRoute");
+const userRouter = require("./Routers/userRoute");
+const authRouter = require("./Routers/authRoute");
+const productRouter = require("./Routers/productRoute");
 
 require('dotenv').config();
-
-// const bcrypt = require("bcrypt");
 
 const app = express();
 
 // FIRST MIDDLEWARE
 app.use(express.json());
+
+// cors
+app.use(cors())
 
 // SECOND MIDDLEWARE
 app.use(function (req, res, next) {
@@ -39,7 +41,7 @@ async function connectDB() {
 connectDB();
 
 // APP listening
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, "localhost", function () {
   console.log(`My app is listening on port ${PORT}...`);
 });

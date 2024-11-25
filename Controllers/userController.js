@@ -129,7 +129,7 @@ exports.uploadUserImage = async function (req, res) {
     const user = await User.findById(req.user._id);
 
     // Define a unique name for the image file using the user ID and current timestamp
-    const imageFile = `user-${user._id}-${Date.now()}.jpeg`;
+    const imageFileName = `user-${user._id}-${Date.now()}.jpeg`;
 
     // Use sharp to process the uploaded image:
     // - Resize it to 750x750 pixels
