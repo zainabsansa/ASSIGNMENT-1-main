@@ -1,4 +1,5 @@
 const generateToken = require("../Helpers/authHelper");
+const { hashPassword } = require("../Helpers/passwordHelper");
 const User = require("../Models/userModel");
 const bcrypt = require("bcrypt");
 
